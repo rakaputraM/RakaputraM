@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .container {
+        background-image: url("background.png");
+        height: 950px;
+        width: 100%;
+        position: relative;
+    }
+    ul {
+        display: flex;
+        justify-content: right;
+    }
+    li {
+        display: inline;
+        margin: 30px 50px;
+        font-size: 25px;
+    }
+    li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff0000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #ff0000;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    .konteks {
+        text-align: center;
+        font-size: 15px;
+        color: white;
+        font-style: unset;
+        width: 1250px;
+        padding-left: 250px;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
+    .gambar {
+        position: absolute;
+        left: 41%;
+        bottom: 10px;
+        display: flex;
+        text-align: center;
+    }
+    .card {
+        border: 5px solid black;
+    }
+    .tab-content {
+      display: none;
+      padding-left: 450px;
+      padding-top: 100PX;
+    }
+    .hg {
+     width: 50%;
+     height: 250px;
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        color: white
+
+    }
+</style>
+</head>
+
+<body> 
+    <div class="container">
+        <ul>
+          <li><button onclick="showTab('kosong')">Menu utama</button></li>
+            <li><button onclick="showTab('motor')">Profile</button></li>
+            <li><button onclick="showTab('Mobil')">Archon</button></li>
+            <li><button onclick="showTab('sepeda')">Characters</button></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">region</a>
+                <div class="dropdown-content">
+                  <a href="#"><button onclick="showTab('fontain')">Fontain</button></a>
+                  <a href="#"><button onclick="showTab('inazuma')">Inazuma</button></a>
+                  <a href="#"><button onclick="showTab('sumeru')">Sumeru</button></a>
+                </div>
+              </li>
+        </ul>
+        <div class="konteks">
+            <h1>GENSHIN IMPACT</h1>
+            <p>Genshin Impact adalah permainan yang bergenre dunia terbuka (open world) sekaligus bermain peran aksi.</p>
+            <p>Genshin Impact berawal dari dunia yang bernama Teyvat, yang terdiri atas tujuh negara besar. Ketujuh negara besar ini diatur oleh dewa yang berbeda yang disebut "Archon", yang dikaitkan dengan unsur dan ideal, dan diperintahkan oleh golongan khusus. Terdapat pulau mengambang bernama Celestia yang berada di atas Teyvat, yang konon merupakan tempat kediaman dewa atau dewi, beserta makhluk-makhluk yang telah menjadi dewa karena kehebatan dan kegagahannya. Di bawahnya, terdapat reruntuhan Khaenri'ah, sebuah negara misterius yang telah diruntuhkan Celestia, lima ratus tahun sebelum awal mulanya event permainan.</p>
+        </div>
+        <!-- foto -->
+        <div id="kosong" class="tab-content w3-animate-bottom">
+         
+                </div>
+        <div id="Mobil" class="tab-content w3-animate-bottom">
+         <a href="cc.html">
+            <img src="archon.png" class="hg" >
+         </a>
+        </div>
+          <div id="motor" class="tab-content w3-animate-bottom">
+               <a href="cc.html">
+                  <p>Nama: Raka putra munggaran</p>
+                  <p>Nim: 10123294</p>
+                  <p>Kelas: IF-7</p>
+               </a>
+              </div>
+          <div id="sepeda" class="tab-content w3-animate-bottom">
+                <a href="cc.html">
+                   <img src="character.png" class="hg" >
+                </a>
+               </div>
+          <div id="fontain" class="tab-content w3-animate-bottom">
+                <a href="cc.html">
+                   <img src="fontain.png" class="hg" >
+                </a>
+               </div>
+          <div id="inazuma" class="tab-content w3-animate-bottom">
+                <a href="cc.html">
+                   <img src="inazuma.png" class="hg" >
+                </a>
+               </div>
+          <div id="sumeru" class="tab-content w3-animate-bottom">
+                <a href="cc.html">
+                   <img src="sumeru.png" class="hg" >
+                </a>
+               </div>
+        <!-- foto -->
+        <div class="gambar">
+            <a href="https://www.instagram.com/raka_pm_?igsh=aW1mMGxldW9yMnQw" target="_blank"><img src="ig.png" alt="" srcset=""></a>
+            <a href="http://"><img src="github.png" alt="" srcset=""></a>
+            <a href="https://www.tiktok.com/@zyn4s?_t=8jLzBX4dARu&_r=1" target="_blank"><img src="tiktok.png" alt="" srcset=""></a>
+        </div>
+    </div>
+    <script>
+        function showTab(tabName) {
+          // Hide all tab contents
+          var tabs = document.getElementsByClassName('tab-content');
+          for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = 'none';
+          }
+      
+          // Show the selected tab content
+          document.getElementById(tabName).style.display = 'block';
+        }
+      </script>
+    </body>
+    </html>
